@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="475.0" style="-fx-background-color: #CCFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.LoginController">
+   <children>
+      <Label layoutX="65.0" layoutY="154.0" prefHeight="30.0" prefWidth="62.0" text="Login">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="212.0" text="Password">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLogin" layoutX="152.0" layoutY="154.0" prefHeight="29.0" prefWidth="255.0" />
+      <Button fx:id="btnConnexion" layoutX="319.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleGetText" prefHeight="27.0" prefWidth="101.0" style="-fx-background-color: black;" text="Connexion" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PasswordField fx:id="txtPwd" layoutX="151.0" layoutY="209.0" prefHeight="29.0" prefWidth="255.0" />
+      <Text fx:id="txtError" fill="#eb3c3c" layoutX="-129.0" layoutY="229.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="241.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="errorLogin" disable="true" editable="false" layoutX="179.0" layoutY="103.0" prefHeight="27.0" prefWidth="212.0" style="-fx-background-color: #CCFFFF; -fx-text-fill: red;" />
+      <Button layoutX="50.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleClickQuitter" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: black;" text="Quitter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="148.0" layoutY="30.0" prefHeight="30.0" prefWidth="180.0" text="Bienvenue a l'école">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

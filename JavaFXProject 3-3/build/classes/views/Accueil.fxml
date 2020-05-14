@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="647.0" prefWidth="756.0" style="-fx-background-color: #CCFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AccueilController">
+   <children>
+      <TabPane layoutX="5.0" layoutY="70.0" prefHeight="586.0" prefWidth="742.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="ongCom" onClosed="#handleOnSelectionChange" text="RECHERCHES">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.7573529411764706" layoutX="6.0" layoutY="7.0" orientation="VERTICAL" prefHeight="546.0" prefWidth="731.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.5" prefHeight="401.0" prefWidth="729.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="380.0" prefWidth="364.0" style="-fx-background-color: silver;">
+                                                   <children>
+                                                      <Label layoutX="5.0" layoutY="54.0" prefHeight="17.0" prefWidth="77.0" text="Numero">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="2.0" layoutY="127.0" text="Telephone">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="telCom" layoutX="77.0" layoutY="123.0" prefHeight="25.0" prefWidth="113.0" />
+                                                      <Button fx:id="okTelCom" layoutX="189.0" layoutY="123.0" minWidth="32.0" mnemonicParsing="false" onAction="#handleClickTelCom" prefHeight="27.0" prefWidth="43.0" text="Ok">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor></Button>
+                                                      <Label layoutX="2.0" layoutY="204.0" text="Numero" textFill="SILVER">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="libProdCom" layoutX="93.0" layoutY="162.0" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: silver;" />
+                                                      <TextField fx:id="qtCom" layoutX="77.0" layoutY="200.0" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: silver;" />
+                                                      <Button fx:id="okProdCom" disable="true" layoutX="248.0" layoutY="154.0" mnemonicParsing="false" onAction="#handleClickProdCom" style="-fx-background-color: silver;" text="Ok" textFill="SILVER">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor></Button>
+                                                      <Label layoutX="4.0" layoutY="150.0" style="-fx-background-color: silver;" text="Produit" textFill="SILVER">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="addProd" disable="true" layoutX="111.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleClickAddProd" style="-fx-background-color: silver;" text="Ajouter au panier" textFill="SILVER">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor></Button>
+                                                      <Button fx:id="saveCom" disable="true" layoutX="271.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleClickSaveCom" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: silver;" text="Commander" textFill="SILVER">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor></Button>
+                                                      <Button fx:id="anCom" layoutX="2.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleClickAnCom" style="-fx-background-color: silver;" text="Annuler" textFill="SILVER">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor></Button>
+                                                      <TextField fx:id="numCom" disable="true" layoutX="82.0" layoutY="50.0" opacity="0.5" prefHeight="25.0" prefWidth="143.0" />
+                                                      <Label layoutX="85.0" layoutY="18.0" prefHeight="17.0" prefWidth="34.0" text="Date">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="dateCom" disable="true" layoutX="124.0" layoutY="14.0" opacity="0.5" prefHeight="27.0" prefWidth="197.0" />
+                                                      <Label layoutX="232.0" layoutY="196.0" text="Stock" textFill="SILVER">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="qtProdCom" disable="true" layoutX="273.0" layoutY="192.0" opacity="0.5" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: silver;" />
+                                                      <TextField fx:id="prenomCom" disable="true" layoutX="81.0" layoutY="199.0" opacity="0.5" prefHeight="25.0" prefWidth="144.0" />
+                                                      <Label layoutX="5.0" layoutY="203.0" text="Prenom">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="236.0" layoutY="203.0" text="Nom">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="nomCom" disable="true" layoutX="274.0" layoutY="199.0" opacity="0.5" prefHeight="25.0" prefWidth="87.0" />
+                                                      <Label layoutX="1.0" layoutY="278.0" text="Niveau études">
+                                                         <font>
+                                                            <Font name="Arial Black" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="prixProdCom" disable="true" layoutX="130.0" layoutY="274.0" opacity="0.5" prefHeight="25.0" prefWidth="143.0" />
+                                                      <TextField fx:id="errorCom" disable="true" layoutX="10.0" layoutY="341.0" prefHeight="35.0" prefWidth="345.0" style="-fx-text-fill: red; -fx-background-color: silver; -fx-border-color: white; -fx-border-width: 1; -fx-border-style: solid; -fx-font-weight: bold;" />
+                                                      <TextField fx:id="idProdCom" layoutX="252.0" layoutY="146.0" opacity="0.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: silver; -fx-border-color: white; -fx-border-width: 1;" />
+                                                      <Button fx:id="delDet" layoutX="279.0" layoutY="276.0" mnemonicParsing="false" onAction="#deleteModele" text="Supprimer" visible="false">
+                                                         <font>
+                                                            <Font name="Arial Black" size="10.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="delCom" layoutX="282.0" layoutY="276.0" mnemonicParsing="false" onAction="#deleteModele" text="Supprimer" visible="false">
+                                                         <font>
+                                                            <Font name="Arial Black" size="10.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TableView fx:id="tabPanier" layoutX="6.0" layoutY="7.0" onMouseClicked="#handleSelectRowTablePan" prefHeight="380.0" prefWidth="330.0" style="-fx-background-color: silver;">
+                                                  <columns>
+                                                    <TableColumn fx:id="c_numComPan" minWidth="0.0" prefWidth="109.0" style="-fx-background-color: silver;" />
+                                                    <TableColumn fx:id="c_libProdPan" minWidth="0.0" prefWidth="78.0" style="-fx-background-color: silver;" />
+                                                      <TableColumn fx:id="c_prixProdPan" minWidth="0.0" prefWidth="79.0" style="-fx-background-color: silver;" />
+                                                      <TableColumn fx:id="c_qtProdPan" prefWidth="62.0" style="-fx-background-color: silver;" />
+                                                      <TableColumn fx:id="c_idProdPan" minWidth="0.0" prefWidth="0.0" text="Id" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="tabCom" layoutX="11.0" onMouseClicked="#handleSelectRowTableCom" prefHeight="125.0" prefWidth="703.0" style="-fx-background-color: silver;">
+                                      <columns>
+                                        <TableColumn fx:id="c_idCom" prefWidth="38.0" text="Id" />
+                                        <TableColumn fx:id="c_numCom" prefWidth="112.0" text="Numéro" />
+                                          <TableColumn fx:id="c_dateCom" prefWidth="149.0" text="Date" />
+                                          <TableColumn fx:id="c_clientCom" prefWidth="204.0" text="Nom &amp; Prenom" />
+                                          <TableColumn fx:id="c_prixCom" prefWidth="199.0" text="Niveau études" />
+                                          <TableColumn fx:id="c_etatCom" minWidth="0.0" prefWidth="0.0" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="ongCl" onClosed="#handleOnSelectionChange" text="AJOUTER PROF">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.3493150684931507" layoutX="4.0" layoutY="14.0" prefHeight="527.0" prefWidth="732.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="298.0">
+                                 <children>
+                                    <AnchorPane layoutX="6.0" layoutY="13.0" prefHeight="420.0" prefWidth="239.0" style="-fx-background-color: Silver;">
+                                       <children>
+                                          <TextField fx:id="nomClient" layoutX="83.0" layoutY="125.0" prefHeight="25.0" prefWidth="149.0" />
+                                          <Label layoutX="5.0" layoutY="129.0" text="Nom">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="idClient" disable="true" layoutX="83.0" layoutY="83.0" opacity="0.5" prefHeight="25.0" prefWidth="150.0" />
+                                          <Label layoutX="6.0" layoutY="87.0" text="Id">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="ErrorClient" disable="true" layoutX="5.0" layoutY="27.0" prefHeight="35.0" prefWidth="229.0" style="-fx-text-fill: red; -fx-background-color: silver; -fx-border-width: 1; -fx-border-color: white; -fx-text-align: center; -fx-font-weight: bold;" />
+                                          <Label layoutX="4.0" layoutY="173.0" text="Prenom">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="6.0" layoutY="263.0" text="Numero">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="telClient" layoutX="83.0" layoutY="259.0" prefHeight="25.0" prefWidth="147.0" />
+                                          <TextField fx:id="emailClient" layoutX="82.0" layoutY="213.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: silver;" />
+                                          <TextField fx:id="prenomClient" layoutX="82.0" layoutY="171.0" prefHeight="25.0" prefWidth="150.0" />
+                                          <Button fx:id="saveClient" layoutX="158.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleClickSaveCl" text="Enregistrer">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="anClient" layoutX="4.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleClickAnCl" text="Annuler">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Label layoutX="7.0" layoutY="5.0" text="Ajouter un professeur">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="delClient" layoutX="73.0" layoutY="372.0" mnemonicParsing="false" onAction="#deleteModele" text="Supprimer" visible="false">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="411.0">
+                                 <children>
+                                    <TableView fx:id="tabClient" layoutX="1.0" layoutY="37.0" onMouseClicked="#handleSelectRowTableClient" prefHeight="478.0" prefWidth="470.0" style="-fx-background-color: silver;">
+                                       <columns>
+                                          <TableColumn fx:id="c_idClient" prefWidth="31.0" text="Id" />
+                                          <TableColumn fx:id="c_nomClient" prefWidth="83.0" text="Nom" />
+                                          <TableColumn fx:id="c_prenomClient" prefWidth="126.0" text="Prenom" />
+                                          <TableColumn fx:id="c_emailClient" minWidth="0.0" prefWidth="0.0" text="Email" />
+                                          <TableColumn fx:id="c_telClient" prefWidth="225.0" text="Numero" />
+                                          <TableColumn fx:id="c_adrClient" minWidth="9.0" prefWidth="35.0" text="Adresse" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="2.0" layoutY="14.0" text="Numero">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="searchTel" layoutX="77.0" layoutY="10.0" prefHeight="25.0" prefWidth="138.0" />
+                                    <Button fx:id="okTel" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClickOkClient" text="Ok">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab fx:id="ongProd" onClosed="#handleOnSelectionChange" text="INSCRIPTION">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.3493150684931507" layoutX="6.0" layoutY="14.0" prefHeight="527.0" prefWidth="732.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="298.0">
+                                 <children>
+                                    <AnchorPane layoutX="5.0" layoutY="11.0" prefHeight="388.0" prefWidth="239.0" style="-fx-background-color: Silver;">
+                                       <children>
+                                          <TextField fx:id="libProd" layoutX="83.0" layoutY="125.0" prefHeight="25.0" prefWidth="149.0" />
+                                          <Label layoutX="5.0" layoutY="129.0" text="Nom  ">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="idProd" disable="true" layoutX="83.0" layoutY="83.0" opacity="0.5" prefHeight="25.0" prefWidth="150.0" />
+                                          <Label layoutX="6.0" layoutY="87.0" text="Id">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="ErrorProd" disable="true" layoutX="5.0" layoutY="27.0" prefHeight="35.0" prefWidth="229.0" style="-fx-text-fill: red; -fx-background-color: silver; -fx-border-color: white; -fx-border-width: 1; -fx-text-align: center; -fx-font-weight: bold;" />
+                                          <Label layoutX="4.0" layoutY="173.0" text="Année">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="catProd" layoutX="83.0" layoutY="169.0" onAction="#handleCatSel" onInputMethodTextChanged="#handleCatSel" onMouseClicked="#handleCatSel" prefHeight="25.0" prefWidth="148.0" />
+                                          <TextField fx:id="qtProd" layoutX="82.0" layoutY="299.0" prefHeight="25.0" prefWidth="148.0" />
+                                          <TextField fx:id="prixProd" accessibleRole="BUTTON" layoutX="83.0" layoutY="259.0" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: silver;" />
+                                          <Label layoutX="6.0" layoutY="303.0" text="Numero">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="4.0" layoutY="220.0" text="Classe">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="scatProd" layoutX="83.0" layoutY="216.0" prefHeight="25.0" prefWidth="147.0" />
+                                          <Button fx:id="saveProd" layoutX="154.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleClickSaveProd" text="Enregistrer">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="anProd" layoutX="6.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleClickAnProd" text="Annuler">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Label layoutX="8.0" layoutY="5.0" text="Etudiant">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="delProd" layoutX="76.0" layoutY="344.0" mnemonicParsing="false" onAction="#deleteModele" text="Supprimer" visible="false">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="4.0" layoutY="264.0" text="BAC+" textFill="SILVER">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="411.0">
+                                 <children>
+                                    <TableView fx:id="tabProd" layoutX="1.0" layoutY="37.0" onMouseClicked="#handleSelectRowTableProd" prefHeight="478.0" prefWidth="470.0" style="-fx-background-color: silver;">
+                                       <columns>
+                                          <TableColumn fx:id="c_idProd" prefWidth="31.0" text="Id" />
+                                          <TableColumn fx:id="c_libProd" prefWidth="89.0" text="Nom" />
+                                          <TableColumn fx:id="c_catProd" prefWidth="86.0" text="Année" />
+                                          <TableColumn fx:id="c_scatProd" prefWidth="111.0" text="Classe" />
+                                          <TableColumn fx:id="c_prixProd" minWidth="0.0" prefWidth="49.0" text="BAC+" />
+                                          <TableColumn fx:id="c_qtProd" prefWidth="101.0" text="Numero" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="2.0" layoutY="12.0" text="Nom">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="searchLibProd" layoutX="55.0" layoutY="8.0" prefHeight="25.0" prefWidth="146.0" />
+                                    <Button fx:id="okLibProd" layoutX="199.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleClickOkProd" text="Ok">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="ongCat" onClosed="#handleOnSelectionChange" text="AJOUTER CLASSE">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.4230769230769231" layoutX="6.0" layoutY="14.0" prefHeight="527.0" prefWidth="730.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="270.0">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="221.0" prefWidth="269.0" style="-fx-background-color: Silver;">
+                                       <children>
+                                          <TextField fx:id="libCat" layoutX="86.0" layoutY="85.0" prefHeight="25.0" prefWidth="173.0" />
+                                          <Label layoutX="9.0" layoutY="89.0" text="Libelle">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="idCat" disable="true" layoutX="86.0" layoutY="45.0" opacity="0.5" prefHeight="25.0" prefWidth="172.0" />
+                                          <Label layoutX="8.0" layoutY="49.0" text="Id">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="anCat" layoutX="7.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleClickAnCat" text="Annuler">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="saveCat" layoutX="183.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleClickSaveCat" text="Enregistrer">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <TextField fx:id="ErrorCat" disable="true" layoutX="6.0" layoutY="182.0" prefHeight="35.0" prefWidth="252.0" style="-fx-text-fill: red; -fx-background-color: silver; -fx-border-color: white; -fx-border-width: 1; -fx-text-align: center; -fx-font-weight: bold;" />
+                                          <Label layoutX="7.0" layoutY="8.0" text="Grade">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="delCat" layoutX="86.0" layoutY="137.0" mnemonicParsing="false" onAction="#deleteModele" text="Supprimer" visible="false">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="251.0" prefHeight="270.0" prefWidth="269.0" style="-fx-background-color: Silver;">
+                                       <children>
+                                          <TextField fx:id="libScat" layoutX="86.0" layoutY="85.0" prefHeight="25.0" prefWidth="173.0" />
+                                          <Label layoutX="9.0" layoutY="89.0" text="Libelle">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="idScat" disable="true" layoutX="86.0" layoutY="45.0" opacity="0.5" prefHeight="25.0" prefWidth="172.0" />
+                                          <Label layoutX="8.0" layoutY="49.0" text="Id">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="ErrorScat" disable="true" layoutX="3.0" layoutY="219.0" prefHeight="48.0" prefWidth="252.0" style="-fx-text-fill: red; -fx-background-color: silver; -fx-border-color: white; -fx-border-width: 1; -fx-text-align: center; -fx-font-weight: bold;" />
+                                          <Label layoutX="8.0" layoutY="133.0" text="Année">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="catScat" layoutX="86.0" layoutY="129.0" prefHeight="25.0" prefWidth="171.0" />
+                                          <Button fx:id="saveScat" layoutX="181.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleClickSaveScat" text="Enregistrer">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="anScat" layoutX="9.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleClickAnScat" text="Annuler">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Label layoutX="7.0" layoutY="10.0" text="Filiere">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="delScat" layoutX="92.0" layoutY="174.0" mnemonicParsing="false" onAction="#deleteModele" text="Supprimer" visible="false">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="368.0">
+                                 <children>
+                                    <TableView fx:id="tabCat" layoutX="8.0" layoutY="43.0" onMouseClicked="#handleSelectRowTableCat" prefHeight="191.0" prefWidth="245.0" style="-fx-background-color: silver;">
+                                      <columns>
+                                        <TableColumn fx:id="c_idCat" prefWidth="61.0" text="Id" />
+                                        <TableColumn fx:id="c_libCat" prefWidth="183.0" text="Libelle" />
+                                      </columns>
+                                    </TableView>
+                                    <TableView fx:id="tabScat" layoutX="8.0" layoutY="282.0" onMouseClicked="#handleSelectRowTableScat" prefHeight="240.0" prefWidth="393.0" style="-fx-background-color: silver;">
+                                       <columns>
+                                          <TableColumn fx:id="c_idScat" prefWidth="63.0" text="Id" />
+                                          <TableColumn fx:id="c_libScat" prefWidth="182.0" text="Libelle" />
+                                          <TableColumn fx:id="c_catScat" prefWidth="147.0" text="Année" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="8.0" layoutY="16.0" text="Libelle">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="searchLibCat" layoutX="68.0" layoutY="12.0" prefHeight="25.0" prefWidth="152.0" />
+                                    <Button fx:id="okLibCat" layoutX="220.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleClickOkCat" text="Ok">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Label layoutX="10.0" layoutY="256.0" text="Libelle">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="searchLibScat" layoutX="70.0" layoutY="252.0" prefHeight="25.0" prefWidth="155.0" />
+                                    <Button fx:id="okLibScat" layoutX="222.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleClickOkScat" text="Ok">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="ongUser" onClosed="#handleOnSelectionChange" text="Utilisateurs">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.3493150684931507" layoutY="8.0" prefHeight="527.0" prefWidth="741.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="298.0">
+                                 <children>
+                                    <AnchorPane layoutX="6.0" layoutY="14.0" prefHeight="435.0" prefWidth="239.0" style="-fx-background-color: silver;">
+                                       <children>
+                                          <TextField fx:id="nomUser" layoutX="83.0" layoutY="125.0" prefHeight="25.0" prefWidth="149.0" />
+                                          <Label layoutX="5.0" layoutY="129.0" text="Nom">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="idUser" disable="true" layoutX="83.0" layoutY="83.0" opacity="0.5" prefHeight="25.0" prefWidth="150.0" />
+                                          <Label layoutX="6.0" layoutY="87.0" text="Id">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="ErrorUser" disable="true" layoutX="5.0" layoutY="27.0" prefHeight="35.0" prefWidth="229.0" style="-fx-text-fill: red; -fx-background-color: silver; -fx-border-width: 1; -fx-border-color: white; -fx-text-align: center; -fx-font-weight: bold;" />
+                                          <Label layoutX="4.0" layoutY="173.0" text="Prenom">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="6.0" layoutY="263.0" text="Telephone">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="telUser" layoutX="83.0" layoutY="259.0" prefHeight="25.0" prefWidth="147.0" />
+                                          <Label layoutX="6.0" layoutY="303.0" text="Password">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="4.0" layoutY="220.0" text="Email">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="emailUser" layoutX="82.0" layoutY="213.0" prefHeight="25.0" prefWidth="149.0" />
+                                          <TextField fx:id="prenomUser" layoutX="82.0" layoutY="171.0" prefHeight="25.0" prefWidth="150.0" />
+                                          <Button fx:id="saveUser" layoutX="159.0" layoutY="389.0" mnemonicParsing="false" onAction="#handleClickSaveU" text="Enregistrer">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="anUser" layoutX="5.0" layoutY="389.0" mnemonicParsing="false" onAction="#handleClickAnU" text="Annuler">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Label layoutX="7.0" layoutY="5.0" text="Utilisateur">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="profilUser" layoutX="83.0" layoutY="342.0" prefWidth="150.0" style="-fx-background-color: silver;" />
+                                          <Label layoutX="7.0" layoutY="346.0" style="-fx-background-color: sylver;" text="Profil" textFill="SILVER">
+                                             <font>
+                                                <Font name="Arial Black" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="adrUser" layoutX="83.0" layoutY="299.0" prefHeight="25.0" prefWidth="147.0" />
+                                          <Button fx:id="delUser" layoutX="75.0" layoutY="388.0" mnemonicParsing="false" onAction="#deleteModele" text="Supprimer" visible="false">
+                                             <font>
+                                                <Font name="Arial Black" size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <TextField fx:id="azer" layoutX="51.0" layoutY="466.0" visible="false" />
+                                    <Button layoutX="147.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleDeconnexion" text="Déconnexion">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="411.0">
+                                 <children>
+                                    <TableView fx:id="tabUser" layoutX="1.0" layoutY="37.0" onMouseClicked="#handleSelectRowTableUser" prefHeight="478.0" prefWidth="470.0" style="-fx-background-color: silver;">
+                                       <columns>
+                                          <TableColumn fx:id="c_idUser" prefWidth="31.0" text="Id" />
+                                          <TableColumn fx:id="c_nomUser" prefWidth="71.0" text="Nom" />
+                                          <TableColumn fx:id="c_prenomUser" prefWidth="113.0" text="Prenom" />
+                                          <TableColumn fx:id="c_emailUser" prefWidth="135.0" text="Email" />
+                                          <TableColumn fx:id="c_proUser" prefWidth="117.0" text="Profil" />
+                                          <TableColumn fx:id="c_adrUser" minWidth="0.0" prefWidth="0.0" text="Adresse" />
+                                          <TableColumn fx:id="c_telUser" prefWidth="91.66668701171875" text="Telephone" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="2.0" layoutY="14.0" text="Telephone">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="searchTelU" layoutX="77.0" layoutY="10.0" prefHeight="25.0" prefWidth="138.0" />
+                                    <Button fx:id="okTelU" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClickOkUser" text="Ok">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="273.0" layoutY="14.0" prefHeight="32.0" prefWidth="207.0" text="GESTION INSCRIPTION">
+         <font>
+            <Font name="Algerian" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+.bg-panel{
+    -fx-background-color: silver;
+}
+.label-style{
+    -fx-text-fill : #007bff;
+    -fx-font-size : 14px;
+    -fx-font-family : Arial;
+    -fx-font-weight : bold;
+    -fx-text-align : center;
+}
+.bg-image{
+    -fx-background-image: url("/img/img.JPG");
+}
